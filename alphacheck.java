@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 /*
@@ -16,9 +15,13 @@ public class alphacheck{
     {
         System.out.println("enter a character");
         Scanner s=new Scanner(System.in);
-       
-        char a=s.next().charAt(0);
-         if((a<90&&a>65)||(a>97&&a<122))
+       String m=s.next();
+     
+           
+        char a=m.charAt(0);
+       if(m.length()<2)
+       {
+        if((a<90&&a>65)||(a>97&&a<122))
             {
              System.out.println("The input is an alphabet");
          
@@ -28,6 +31,11 @@ public class alphacheck{
              System.out.println("The input is not an alphabet");
         }
         }
-      
-    }
-
+       else
+       {
+           System.out.println("The input should be an single digit or alphabet");
+        
+       }
+    
+    }      
+}
